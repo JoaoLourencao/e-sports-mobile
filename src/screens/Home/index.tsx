@@ -1,5 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import { FlatList, Image } from 'react-native';
 import { SafeAreaView } from "react-native-safe-area-context";
 import logoImg from "../../assets/logo-nlw-esports.png";
@@ -19,7 +19,7 @@ export function Home() {
   }
 
   useEffect(() => {
-    fetch('http://172.20.10.4:3333/games')
+    fetch('http://192.168.0.14:3333/games')
       .then(response => response.json())
       .then(data => setGames(data))
   }, [])
